@@ -14,7 +14,7 @@ def index(request):
             form.save()
             print('Dados salvos com sucesso!!!')
             form.cleaned_data
-            return render(request, 'index.html', {'form':form})
+            #return render(request, 'index.html', {'form':form})
         else:
             messages.sucess(request, 'Erro ao salvar os dados!')
             return redirect('index')
