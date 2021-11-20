@@ -17,6 +17,9 @@ class Monografia(models.Model):
     Data = models.CharField(max_length=10)
     Banca = models.CharField(max_length=300)
     Url = models.CharField(max_length=300)
+
+    class Meta:
+        db_table="repositoriodemonografias"
     
     def _str_(self):
         return self.Titulo

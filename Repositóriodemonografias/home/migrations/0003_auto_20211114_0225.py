@@ -17,56 +17,56 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='monografia',
             name='Area',
-            field=models.CharField(default=' ', max_length=100),
+            field=models.CharField(max_length=100),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Autor',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Banca',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Curso',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField( max_length=300),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Data',
-            field=models.DateField(default=True),
+            field=models.CharField(max_length=10),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Formato',
-            field=models.CharField(default=' ', max_length=10),
+            field=models.CharField(max_length=10),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Numero_de_Paginas',
-            field=models.CharField(default=' ', max_length=3),
+            field=models.CharField(max_length=3),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Universidade',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
         migrations.AddField(
             model_name='monografia',
             name='Url',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
         migrations.AlterField(
             model_name='monografia',
             name='Orientador',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
         migrations.AlterField(
             model_name='monografia',
             name='Titulo',
-            field=models.CharField(default=' ', max_length=300),
+            field=models.CharField(max_length=300),
         ),
     ]

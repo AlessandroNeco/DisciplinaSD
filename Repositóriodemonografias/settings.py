@@ -90,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DB_NAME', 'db_monografia'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASS', '123'),
+        'USER': os.environ.get('DB_USER', 'neco'),
+        'PASSWORD': os.environ.get('DB_PASS', '12345'),
         'HOST': 'localhost',
         'PORT': '5432',
     }

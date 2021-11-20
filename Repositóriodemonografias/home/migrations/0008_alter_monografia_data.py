@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='monografia',
             name='Data',
-            field=models.CharField(default='', max_length=10),
+            field=models.CharField(max_length=10),
         ),
     ]
