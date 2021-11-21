@@ -13,8 +13,8 @@ class Monografia(models.Model):
     Universidade = models.CharField(max_length=300)
     Area = models.CharField(max_length=100)
     Formato = models.CharField(max_length=10)
-    Numero_de_Paginas = models.CharField(max_length=4)
-    Data = models.CharField(max_length=10)
+    Numero_de_Paginas = models.IntegerField()
+    Data = models.DateField(max_length=10)
     Banca = models.CharField(max_length=300)
     Url = models.CharField(max_length=300)
 

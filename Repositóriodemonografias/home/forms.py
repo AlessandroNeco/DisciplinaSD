@@ -6,3 +6,4 @@ class MonografiaForm(forms.ModelForm):
         model = Monografia
         fields = ["Titulo", "Autor", "Orientador", "Curso", "Universidade","Area", 
         "Formato", "Numero_de_Paginas", "Data", "Banca", "Url"]
+        #fields = '__all__'
