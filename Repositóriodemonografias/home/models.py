@@ -5,6 +5,7 @@ from django.db import models
 from settings import DEFAULT_AUTO_FIELD
 
 # Create your models here.
+#Definicao dos Metadados
 class Monografia(models.Model):
     Titulo = models.CharField(max_length=300)
     Autor = models.CharField(max_length=300)
