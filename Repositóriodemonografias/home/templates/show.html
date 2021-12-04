@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Monografia</title>
+    {% load static %}
+    <link rel="sylesheet" href="{% static 'css/style.css' %}"/>
+
+</head>
+<body>
+    <table class="table able-striped table-bordered table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Orientador</th>
+                <th>Curso</th>
+                <th>Universidade</th>
+                <th>Area</th>
+                <th>Formato</th>
+                <th>Número de Páginas</th>
+                <th>Data</th>
+                <th>Banca</th>
+                <th>Url</th>
+                <th>Ações</th>
+                
+            </tr>
+
+        </thead>
+        <tbody>
+            {%for mono in monografia%}
+            <tr>
+                <td>mono.Titulo</td>
+                <td>mono.Autor</td>
+                <td>mono.Orientador</td>
+                <td>mono.Curso</td>
+                <td>mono.Universidade</td>
+                <td>mono.Area</td>
+                <td>mono.Formato</td>
+                <td>mono.NumPag</td>
+                <td>mono.Data</td>
+                <td>mono.Banca</td>
+                <td>mono.Url</td>
+                <td>
+                    <a href="/editar/{{mono.id}}"> 
+                        <span class="glyphicon glyphicon-pencil"> Editar</span>
+                    </a>
+                    <a href="/delete/{{mono.id}}"> Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+
+    </table>
+    <br>
+    <br>
+    <div><a href="/index" class="centerBt"> Adicionar nova Monografia </a></div>
+</body>
+
+
+</html>

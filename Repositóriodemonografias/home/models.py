@@ -21,7 +21,6 @@ class Monografia(models.Model):
 
     class Meta:
         db_table="repositoriodemonografias"
-    
-    def _str_(self):
-        return self.Titulo
 
+    def __str__(self):
+        return self.Titulo

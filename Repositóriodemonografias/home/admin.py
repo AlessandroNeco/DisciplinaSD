@@ -5,3 +5,7 @@ from .models import Monografia
 
 admin.site.register(Monografia)
 
+
+
+
+
