@@ -9,16 +9,15 @@ from home.forms import MonografiaForm
 
 # Create your views here.
 def index(request):
-    monografia = Monografia.objects.all()
+    #monografia = Monografia.objects.all()
     if request.method=='POST':
         form = MonografiaForm(request.POST)
         if form.is_valid():
             form.save()
             print('Dados salvos com sucesso!!!')
-            form.cleaned_data
-            return redirect('/show')
-            
-            #return render(request, 'index.html', {'form':form})
+            #form.cleaned_data
+            return redirect('show.html')
+             
         else:
             print('Erro ao salvar os dados!')
             #messages.error(request, "Error")
@@ -28,22 +27,22 @@ def index(request):
     return render(request, 'index.html', {'form':form})
 
 def showMonografia(request):  
-    mostrar = Monografia.objects.all()  
-    return render(request,"show.html",{'mostar':mostrar})  
+    dadosMonografia = Monografia.objects.all()
+    return render(request,'show.html', {'dadosMonografia': dadosMonografia})  
 
 def editarMonografia(request, id):  
     editarMono = Monografia.objects.get(id=id)  
-    return render(request,'editar.html', {'editarMono':editarMono})  
+    return render(request,'editar.html', {'editarMono': editarMono})  
 
 def atualizarMonografia(request, id):  
-    atualizarMono = Monografia.objects.get(id=id)  
-    form = MonografiaForm(request.POST, instance = atualizarMono)  
+    editarMono = Monografia.objects.get(id=id)  
+    form = MonografiaForm(request.POST, instance = editarMono)  
     if form.is_valid():  
         form.save()  
-        return redirect("/show")  
-    return render(request, 'atualizar.html', {'atualizarMono': atualizarMono})  
+        return redirect("/show.html")  
+    return render(request, 'editar.html', {'editarMono': editarMono})  
 
 def deletarMonografia(request, id):  
     deletarMono = Monografia.objects.get(id=id)  
     deletarMono.delete()  
-    return redirect("/show")
+    return redirect("/show.html")

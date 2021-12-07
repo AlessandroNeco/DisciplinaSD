@@ -39,9 +39,34 @@
                 <div class="row">
                     <div class="row-sm-8">
                         <div class="row-sm-4">
-                            <!--{{ form.as_p }}-->  
-                            {{form}}
+                            <!--{{ form.as_p }}-->
+                            <div>
+                            <label class="col-sm-2 col-form-label">Titulo:</label>  
+                                {{form.Titulo}}
+                            <label class="col-sm-2 col-form-label">Autor:</label>  
+                                {{form.Autor}}
+                            <label class="col-sm-2 col-form-label">Orientador:</label>  
+                                {{form.Orientador}}
+                            <label class="col-sm-2 col-form-label">Curso:</label>  
+                                {{form.Curso}}
+                            <label class="col-sm-2 col-form-label">Universidade:</label>  
+                                {{form.Universidade}}
+                            <label class="col-sm-2 col-form-label">Area:</label>  
+                                {{form.Area}}
+                            <label class="col-sm-2 col-form-label">Formato:</label>  
+                            <br><center>{{form.Formato}}</center>
+                            <label class="col-sm-8 col-form-label">Número de Páginas:</label>  
+                             {{form.Numero_de_Paginas}}
                             
+                            <label class="col-sm-8 col-form-label">Data:</label>  
+                                {{form.Data}}
+                                <br>
+                            <label class="col-sm-2 col-form-label">Banca:</label>  
+                                {{form.Banca}}
+                            <label class="col-sm-2 col-form-label">Url:</label>  
+                                {{form.Url}} 
+                            
+                           
                         </div>
                     </div>
                 </div>
