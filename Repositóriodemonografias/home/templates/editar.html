@@ -73,12 +73,38 @@
 					<input type="text" name="Area" id="id_Area" required maxlength="300" value= "{{editarMono.Area}}" />  
 				</div>  
 			</div>  
-				
+		
+			
 			<div class="form-group row">  
 				<label class="col-sm-2 col-form-label">Formato:</label>  
 				<div class="col-sm-4">  
 					
-					<select type="select" name="Formato" id="id_Formato" required maxlength="100" value= "{{editarMono.Area}}"></select>  
+					<select type="text" name="Formato" id="id_Formato" required maxlength="100" value= "{{editarMono.Formato}}" >
+						
+						{% if editarMono.Formato == 'PDF' %}
+							<option value="PDF" selected=" ">PDF</option>
+							<option value="WORD">WORD</option>
+							<option value="ZIP">ZIP</option>
+							{%else%}
+							{% if editarMono.Formato == 'WORD' %}
+								<option value="PDF" >PDF</option>
+								<option value="WORD" selected=" ">WORD</option>
+								<option value="ZIP">ZIP</option>
+							{%else%}
+							
+								<option value="PDF" >PDF</option>
+								<option value="WORD">WORD</option>
+								<option value="ZIP" selected=" ">ZIP</option>
+								
+							{%endif%}
+						
+						{%endif%}
+						
+					
+						
+					  </select>
+				 
+				
 				</div>  
 			</div>  
 
@@ -90,13 +116,20 @@
 				</div>  
 			</div>  
 
+		
+
+
 			<div class="form-group row">  
 				<label class="col-sm-2 col-form-label">Data:</label>  
 				<div class="col-sm-4">  
 					
-					<input type="date" name="Data" id="id_Data" required maxlength="300" value= "{{editarMono.Data}}" />  
+					<input type="date" name="Data" id="id_Data" required maxlength="10"  value="{{ editarMono.Data | date:"Y-m-d"}}" />
+				 
 				</div>  
 			</div>  
+
+			<!--<input type="text" name="Data" id="id_Data" required maxlength="300" value= "{{editarMono.Data}}" /> -->
+
 
 			<div class="form-group row">  
 				<label class="col-sm-2 col-form-label">Banca:</label>  

@@ -6,9 +6,10 @@ from .models import *
 
 
 
+
 class MonografiaForm(forms.ModelForm):
     Data = forms.DateField(widget=widgets.NumberInput(attrs={'type': 'date'}))
- 
+
     #Data = forms.DateField(widget=widgets.SelectDateWidget()
     class Meta:
         model = Monografia

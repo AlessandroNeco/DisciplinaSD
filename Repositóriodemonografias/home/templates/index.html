@@ -59,7 +59,8 @@
                              {{form.Numero_de_Paginas}}
                             
                             <label class="col-sm-8 col-form-label">Data:</label>  
-                                {{form.Data}}
+                                
+                                {{form.Data | date:"d/m/Y"}}
                                 <br>
                             <label class="col-sm-2 col-form-label">Banca:</label>  
                                 {{form.Banca}}
